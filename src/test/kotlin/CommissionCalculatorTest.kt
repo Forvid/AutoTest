@@ -6,9 +6,9 @@ class CommissionCalculatorTest {
 
     @Test
     fun testMastercardCommission() {
-        val transfer = Transfer(10_000.0, "Mastercard")
-        assertEquals(0.0, calculateCommission(transfer, 50_000.0, 0.0), 0.01)
+        assertEquals(100.0, calculator.calculateCommission(500.0, "Mastercard")) // Неправильное значение
     }
+
 
     @Test
     fun testVisaCommission() {
